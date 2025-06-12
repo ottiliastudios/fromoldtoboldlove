@@ -22,21 +22,21 @@ st.markdown("""
             margin-top: 2rem;
         }
 
-        .external-button {
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0 1rem 0;
-        }
+       .external-button-small {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
 
-        .external-button a {
-            background-color: black;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Syne', sans-serif;
-            margin-left: -2rem;
+.external-button-small a {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+}
         }
 
         .description-text {
@@ -56,16 +56,16 @@ with st.container():
     with cols[1]:  # Mittlere Spalte für Zentrierung
         st.image("logo.png", width=180)
 
-# --- Button ---
-st.markdown("""
-<div class="external-button">
-    <a href="https://eager-transform-667249.framer.app/" target="_blank">WHAT IS FROM OLD TO BOLD</a>
-</div>
-""", unsafe_allow_html=True)
+
 
 # --- Beschreibung ---
 st.markdown('<div class="description-text">Upload a photo of your old piece of jewelry. Our AI estimates the weight and suggests matching new designs!</div>', unsafe_allow_html=True)
 
+st.markdown("""
+<div class="external-button-small">
+    <a href="https://eager-transform-667249.framer.app/" target="_blank">WHAT IS FROM OLD TO BOLD</a>
+</div>
+""", unsafe_allow_html=True)
 
 # Auswahl: Material
 material = st.selectbox("Select material", ["Silver", "Gold", "Other"])
