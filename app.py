@@ -58,7 +58,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- Logo ---
-st.markdown('<div class="center-logo"><img src="logo.png" width="180"></div>', unsafe_allow_html=True)
+with st.container():
+    cols = st.columns(3)
+    with cols[1]:  # Die mittlere von drei Spalten
+        st.image("logo.png", width=180)
 
 # --- Button ---
 st.markdown("""
