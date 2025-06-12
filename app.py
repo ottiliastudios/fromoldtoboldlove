@@ -46,14 +46,7 @@ st.markdown("""
             margin-bottom: 2rem;
         }
 
-        .boxed {
-            border: 1px solid #000000;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 0 auto;
-            background-color: #f9f9f9;
-            width: 80%;
-        }
+       
     </style>
 """, unsafe_allow_html=True)
 
@@ -73,8 +66,6 @@ st.markdown("""
 # --- Beschreibung ---
 st.markdown('<div class="description-text">Upload a photo of your old piece of jewelry. Our AI estimates the weight and suggests matching new designs!</div>', unsafe_allow_html=True)
 
-# --- Rahmen um Auswahlfeld ---
-st.markdown('<div class="boxed">', unsafe_allow_html=True)
 
 # Auswahl: Material
 material = st.selectbox("Select material", ["Silver", "Gold", "Other"])
@@ -108,5 +99,4 @@ if uploaded_file:
     else:
         st.write("No matching designs found.")
 
-# --- Ende Rahmen ---
-st.markdown('</div>', unsafe_allow_html=True)
+
